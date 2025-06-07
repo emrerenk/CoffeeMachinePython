@@ -45,7 +45,6 @@ def resources_update(chosen_coffee):
 
 
 
-
 def money_calculating(quarters_money, dimes_money, nickles_money, pennies_money, chosen_coffee):
     total_money = (quarters_money * 0.25) + (dimes_money * 0.1) + (nickles_money * 0.05) + (pennies_money * 0.01)
     coffee_cost = MENU[chosen_coffee]["cost"]
@@ -98,7 +97,6 @@ def resources_control(coffee):
 
 
 
-#TODO: 2. Kullanicinin baslangictaki promptu kontrol edilecek
 def check_prompt(prompt):
     if prompt == "report":
         for i in resources:
@@ -116,8 +114,6 @@ def check_prompt(prompt):
 
 
 
-# TODO: 1. Prompt user by asking “What would you like? (espresso/latte/cappuccino):”
-
 while True:
     user_prompt = input("What would you like? (espresso/latte/cappuccino): ").lower()
     continue_status = check_prompt(user_prompt)
@@ -129,11 +125,3 @@ while True:
         delivery_coffee = money_calculating(quarters, dimes, nickles, pennies, user_prompt)
         if delivery_coffee:
             resources_update(user_prompt)
-
-
-
-
-
-
-
-
